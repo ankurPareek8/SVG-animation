@@ -1,0 +1,668 @@
+@import url('https://fonts.googleapis.com/css?family=Yantramanav:100');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400');
+
+/* SCSS  */
+$colors: (
+  primary: #A5C487,
+  dark : #1e221c,
+  light: rgb(163, 162, 162),
+  shadow: 0 1px 5px rgba(104, 104, 104, 0.8),
+  white: #ffff,
+);
+
+html{
+  box-sizing: border-box;
+  font-family: Montserrat, Helvetica, sans-serif;
+  font-weight:bold;
+  font-size: .9em;
+  color:  map-get($colors, light );
+  height: 100%;
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+}
+
+body{
+  background: map-get($colors, dark );
+  /*margin: 30px 50px;*/
+  line-height: 1.4;
+  margin:0;
+  height: 100%;
+}
+.portfolio{
+  background-color:map-get($colors, dark);
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  float: left;
+  margin-right: 20px;
+}
+.portfolio:hover{
+   background-color:map-get($colors, primary );
+}
+
+.dropbtn {
+  background-color:map-get($colors, dark);
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 130px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color:map-get($colors, primary );}
+
+
+
+.rain{
+  width:100%;
+  position: absolute;
+  z-index: -1;
+}
+
+
+.btn{
+  background-color: map-get($colors, dark );
+  color:map-get($colors, light );
+  padding: 0.6rem 1.3rem;
+  text-decoration: none;
+  border:0;
+}
+
+.btn:hover{
+  color:map-get($colors, dark );
+  background-color: map-get($colors, light );
+  transition-duration: .6s;
+}
+
+.wrapper{
+  display: grid;
+  grid-gap: 20px;
+}
+.top-container{
+  width: 100%;
+  height: 51.2rem;
+}
+
+
+/* showcase */
+.showcase {
+  width:100%;
+  height:100%;
+  min-height: 600px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin:0 auto;
+  justify-content: center;  
+}
+img.logoWhite{
+  width:auto;
+  transition: padding-bottom .6s ease-out;
+  margin: 0;
+}
+img.logoWhite:hover{
+  padding-bottom: 10%;
+}
+
+.showcase h1{
+  font-size: 5rem;
+  color: map-get($colors, dark );
+  margin-bottom: 0;
+}
+
+.showcase p{
+  font-size: 1.1rem;
+  color: map-get($colors, light );
+  margin-top: 0;
+  line-height: 30px;;
+}
+a{
+  color: white;
+  text-decoration: none;
+}
+.scroll-down{
+  width: 100%;
+  margin:0 auto;
+  text-align: center;
+}
+
+/* labs section */
+
+#labs{
+  width:100%;
+  height: 20rem;
+  background:brown;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-content: center;
+  justify-items: center;
+}
+
+/*Contact From */
+
+
+input[type=text], textarea {
+  width: 100%;
+  padding: 06px;
+  border: .5px solid var(--dark);
+  border-radius: 2px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  border: 1px #4CAF50 solid;
+  background-color:none;
+  color:var(--dark);
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color .6s ease-out;
+}
+
+input[type=submit]:hover {
+  background-color: var(--primary);
+}
+#contact-form h3{
+  margin-left:25%;
+  padding-top:5rem;
+}
+
+#form {
+  position: relative;
+  padding:30px;
+  width: 50%;
+  margin: 0 auto;
+}
+#contact-form{
+  width: 100%;
+  margin:auto;
+}
+.form-bg-img{
+  width:100%;
+  z-index: -1;
+  position: absolute;
+  opacity: .4;
+}
+/*Contact form ends here*/
+
+/*Footer start here*/
+.footer{
+  width:100%;
+  height:20%;
+  /*background:blue;*/
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+}
+.footer .social{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 2rem;
+  align-items: center;
+  justify-items: center;
+}
+
+/* Landing page styles starts */
+
+
+html,body{
+    margin:0;
+    padding:0;
+    height:100%;
+    width:100%;
+}
+
+.intro{
+    height:100%;
+    width: 100%;
+    margin:auto;
+}
+.inner{
+    width: 100%;
+    height:100%;
+    text-align: center;
+    background-color:beige;
+}
+.outline{
+    width:450px;
+    height:450px;
+    margin:0;
+    padding: 0;
+}
+.logoFill{
+    width:450px;
+    height:450px; 
+    margin:0;
+    padding: 0;
+}
+/*--.content{
+    margin:0 auto;
+    text-align: bottom;
+}-*/
+h1{
+    font-size: 230%;
+    font-weight: 100;
+    color: #828182;
+    margin-top:0;
+    font-family: 'Yantramanav', sans-serif;
+}
+
+.welcome_btn{
+    font-size: 105%;
+    color:#686868;
+    font-weight: 100;
+    font-family:'Montserrat', sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: solid 2px #686868;
+    padding:5px 15px;
+    border-radius: 9px;
+    transition: all 0.3s;
+    margin-top:10%;
+    transition: background-color .6s ease-out;
+    transition: color .6s ease-out;
+    
+}
+.welcome_btn:hover{
+    color:beige;
+    background-color:#A5C487;
+}
+.logo{
+    text-align: center;  
+    width:100%;
+    padding: 109px 0;
+    text-align: center;
+    margin: auto;
+    position: absolute;
+    /*background-color:beige;*/
+    
+}
+
+.logoTop{
+    width:100%;
+    position: relative;
+    text-align: center;  
+    padding-top: 109px ;
+    text-align: center;
+    margin: auto 0;
+    opacity:0;
+}
+
+@media screen and (max-width: 1024px) {
+   
+    h1{
+        font-size:230%;
+    }
+    a{
+        font-size: 100%;
+    }
+
+   .outline{
+        width:30%;
+        height:30%;
+   }
+   .logoFill{
+        width:30%;
+        height:30% 
+   }
+   .scroll-down{
+    width: 100%;
+    margin:0 auto;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 830px) {
+   
+    h1{
+        font-size:230%;
+    }
+    a{
+        font-size: 70%;
+    }
+
+   .outline{
+        width:15%;
+        height:15%;
+   }
+   .logoFill{
+    width:15%;
+    height:15%; 
+    text-align:auto;
+   }
+   .scroll-down{
+    width: 100%;
+    margin:0 auto;
+    text-align: center;
+  }
+}
+
+@media  (max-width: 768px) {
+  .top-container{
+    grid-template-areas:
+      'showcase showcase'
+      'top-box-a top-box-b';
+  }
+.showcase h1{
+  font-size: 2.5rem;
+}
+
+.showcase{
+  margin-top: 0px;
+}
+.logoWhite{
+  width:100px;
+  height:100px;
+}
+
+.info{
+  grid-template-columns: 1fr;
+}
+
+.info .btn{
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+
+.rain{
+  height: 100vh;
+  text-align: center;
+}
+h1{
+  font-size:230%;
+}
+a{
+  font-size: 100%;
+}
+
+.outline{
+  width:15%;
+  height:15%;
+}
+.logoFill{
+width:15%;
+height:15% 
+}
+.scroll-down{
+  width: 100%;
+  margin:0 auto;
+  text-align: center;
+}
+}
+
+@media (max-width:500px) {
+ 
+  .st0{
+    width: 100%;
+    height: 200vh;
+  }
+  .logoWhite{
+    width:100px;
+    height:100px;
+  }
+  .showcase{
+    height:100%;
+  }
+  .rain{
+    height: 100vh;
+    text-align: center;
+  }
+.scroll-down{
+  width: 100%;
+  margin:0 auto;
+  text-align: center;
+}
+.footer{
+  width:100%;
+  /*background:blue;*/
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
+  align-content: center;
+  justify-content: center;
+  
+}
+}
+@media screen and (max-width: 568px) {
+        h1{
+              font-size:220%;
+          }
+          a{
+              font-size: 80%;
+          }
+      
+         .outline{
+              width:15%;
+              height:15%;
+         }
+         .logoFill{
+          width:15%;
+          height:15% 
+         }
+
+  .st0{
+    width: 100%;
+    height: 200vh;
+  }
+  .logoWhite{
+    width:100px;
+    height:100px;
+  }
+  .showcase{
+    height:100%;
+  }
+  .rain{
+    height: 100vh;
+    text-align: center;
+  }
+.scroll-down{
+  width: 100%;
+  margin:0 auto;
+  text-align: center;
+}
+.footer{
+  width:100%;
+  /*background:blue;*/
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
+  align-content: center;
+  justify-content: center;
+  
+}
+}
+@media screen and (max-width: 414px) {
+    h1{
+          font-size:220%;
+      }
+      a{
+          font-size: 80%;
+      }
+  
+     .outline{
+          width:30%;
+          height:30%;
+     }
+     .logoFill{
+      width:30%;
+      height:30% 
+     }
+
+  .st0{
+    width: 100%;
+    height: 200vh;
+  }
+  .logoWhite{
+    width:100px;
+    height:100px;
+  }
+  .showcase{
+    height:100%;
+  }
+  .rain{
+    height: 100vh;
+    text-align: center;
+  }
+.scroll-down{
+  width: 100%;
+  margin:0 auto;
+  text-align: center;
+}
+.footer{
+  width:100%;
+  /*background:blue;*/
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
+  align-content: center;
+  justify-content: center;
+  
+}
+}
+@media screen and (max-width: 375px) {
+    h1{
+          font-size:230%;
+      }
+      a{
+          font-size: 100%;
+      }
+  
+     .outline{
+          width:50%;
+          height:50%;
+     }
+     .logoFill{
+      width:50%;
+      height:50% 
+     }
+
+  .st0{
+    width: 100%;
+    height: 200vh;
+  }
+  .logoWhite{
+    width:100px;
+    height:100px;
+  }
+  .showcase{
+    height:100%;
+  }
+  .rain{
+    height: 100vh;
+    text-align: center;
+  }
+.scroll-down{
+  width: 100%;
+  margin:0 auto;
+  text-align: center;
+}
+.footer{
+  width:100%;
+  /*background:blue;*/
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
+  align-content: center;
+  justify-content: center;
+  
+}
+}
+@media screen and (max-width: 360px) {
+    h1{
+          font-size:230%;
+      }
+      a{
+          font-size: 110%;
+      }
+  
+     .outline{
+          width:50%;
+          height:50%;
+     }
+     .logoFill{
+      width:50%;
+      height:50% 
+     }
+
+  .st0{
+    width: 100%;
+    height: 200vh;
+  }
+  .logoWhite{
+    width:100px;
+    height:100px;
+  }
+  .showcase{
+    height:100%;
+  }
+  .rain{
+    height: 100vh;
+    text-align: center;
+  }
+.scroll-down{
+  width: 100%;
+  margin:0 auto;
+  text-align: center;
+}
+.footer{
+  width:100%;
+  /*background:blue;*/
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
+  align-content: center;
+  justify-content: center;
+  
+}
+}
+@media screen and (max-width: 320px) {
+  h1{
+        font-size:230%;
+    }
+    a{
+        font-size: 100%;
+    }
+
+   .outline{
+        width:50%;
+        height:50%;
+   }
+   .logoFill{
+    width:50%;
+    height:50% 
+   }
+}
+
+
+

@@ -1,0 +1,7 @@
+.webkit-os-animation{
+ 	opacity: 0;
+ }  
+
+ .webkit-os-animation.animated{
+  	opacity: 1;
+  } 
